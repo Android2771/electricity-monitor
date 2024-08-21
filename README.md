@@ -20,6 +20,6 @@ If you come from a country with questionable electricity reliability, and you wo
 * Under the URL, add a [generated UUID4](https://andrewbuhagiar.com:8443/uuid4) as an empty/random dictionary (the monitor will take care of the rest)
 
 ### Setting up devices
-* Download the apk on your phone from the GitHub published packages or build it yourself by referring [here](./frontend/README.md)
+* Build the apk by referring [here](./frontend/README.md) after setting the [Firebase config](./frontend/app/(tabs)/firebaseConfig.js)
 * On the remote server, go to the `monitor` directory and run `docker compose up -d --build`
 * On the device at home, go to the `reporter` directory and run `docker compose up -d --build`
