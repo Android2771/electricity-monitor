@@ -7,7 +7,7 @@ const INTERVAL = 120000;
 const lastPingRef = ref(database, `/${process.env.KEY}/lastPing`)
 const entriesRef = ref(database, `/${process.env.KEY}/entries`)
 
-if((!(await get(entriesRef)).val()) || !(await get(lastPingRef).val())){
+if((!(await get(entriesRef)).val()) || !(await get(lastPingRef)).val()){
     const rootRef = ref(database, `/${process.env.KEY}`);
     set(rootRef, { 
         "entries":
