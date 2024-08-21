@@ -1,0 +1,9 @@
+services:
+  monitor:
+    container_name: monitor
+    build:
+      context: .
+      dockerfile: Dockerfile
+      no_cache: true
+    image: monitor
+    restart: unless-stopped

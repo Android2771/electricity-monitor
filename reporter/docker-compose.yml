@@ -1,0 +1,9 @@
+services:
+  reporter:
+    container_name: reporter
+    build:
+      context: .
+      dockerfile: Dockerfile
+      no_cache: true
+    image: reporter
+    restart: unless-stopped
