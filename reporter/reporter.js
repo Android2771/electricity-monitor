@@ -20,20 +20,20 @@ if((!(await get(entriesRef)).val()) || !(await get(lastPingRef)).val()){
 }else{    
     const lastPing = (await get(lastPingRef)).val();
     const entries = (await get(entriesRef)).val();
-    const ping = (new Date()).getTime();
+    const newPing = (new Date()).getTime();
 
     console.log("Registering powercut at ", lastPing)
-    console.log("Registering power coming back at ", ping)
+    console.log("Registering power coming back at ", newPing)
 
-    await set(lastPingRef, ping);
-    
+    await set(lastPingRef, newPing);
+
     await set(entriesRef, [...entries, {
         "isPowerCut": true,
         time: lastPing
     },
     {
         "isPowerCut": false,
-        time: (new Date()).getTime()
+        time: newPing
     }])
 }
 
