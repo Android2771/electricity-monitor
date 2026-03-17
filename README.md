@@ -9,9 +9,8 @@ If you come from a country with questionable electricity reliability, and you wo
 ### Requirements
 
 * A phone to see the power history
-* A remote server - Will act as the monitor and assuming it is unimpeded by electricity cuts
-* Any device at home (no worries if it turns off in power cuts)
-* A 24/7 internet connection which turns off in a powercut
+* Any device at home (must turn off in power cut and power back up when power comes back)
+* A 24/7 internet connection (but can cut during powercut)
 * A Firebase realtime database (free!)
 
 ### Setting up Firebase server
@@ -21,5 +20,4 @@ If you come from a country with questionable electricity reliability, and you wo
 
 ### Setting up devices
 * Build the apk by referring [here](./frontend/README.md) after setting the [Firebase config](./frontend/app/(tabs)/firebaseConfig.js)
-* On the remote server, go to the `monitor` directory and run `docker compose up -d --build`
 * On the device at home, go to the `reporter` directory and run `docker compose up -d --build`
